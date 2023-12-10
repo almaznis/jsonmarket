@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+        <header>
+            <div class="header-content">
+                <h1>{ json-type: 'market' }</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/about">{ о проекте }</a></li>
+                        <li><a href="/how-to-buy">{ как купить }</a></li>
+                        <li><a href="/contacts">{ контакты }</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <!-- Rest of your content goes here -->
+    
+    
+
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='assets/main.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <button class="glow-on-hover">GET</button>
+        <button class="glow-on-hover">POST</button>
+    </div>
+
+</body>
+</html>

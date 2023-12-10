@@ -1,0 +1,206 @@
+.full-screen {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101; /* Ensures it's above other content */
+    padding: 10px 20px; /* Padding around header */
+    display: flex;
+    align-items: center;
+}
+
+header .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Aligns items to the left */
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+header h1 {
+    margin: 0 20;
+    color: white; /* Change the color as needed */
+    font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px;
+    margin-left: 40px;
+
+}
+
+nav ul li a {
+    color: white; /* Change the color as needed */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 1em;
+    font-family: "Cascadia Code";
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+            overflow: hidden;
+            z-index: -100;
+        }
+
+        header {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101; /* Ensures it's above other content */
+    padding: 20px 0; /* Add some padding at the top */
+}
+
+header h1 {
+    margin: 20;
+    padding: 0;
+    color: white; /* Change the color as needed */
+    font-size: 1.5em; /* Adjust the font size as needed */
+    font-family: "Cascadia Code";
+}
+
+
+        .video-background video {
+            width: 100vw; /* Full width */
+            height: 100vh; /* Full height */
+            object-fit: cover; /* This will cover the entire viewport without changing the aspect ratio */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the video */
+        }
+
+        .content {
+            position: relative;
+            z-index: 100; /* Ensure content is above the video */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Text color for visibility */
+        }
+
+
+        .content button {
+    margin: 0 300px; /* Default margin */
+    border: 1px solid white; /* White border for buttons */
+    outline: none; /* Removes the default focus outline */
+}
+
+nav ul li a {
+    /* Existing styles */
+    display: block; /* Added to apply the effect correctly */
+    padding: 10px 15px; /* Add padding for better visibility of the effect */
+    margin: -10px -15px; /* Adjust margin to compensate for padding */
+}
+
+/* Apply the glow effect to the menu items */
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .glow-on-hover:before {
+            /* styles provided for glowing effect */
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        /* Additional styles for interaction */
+        .glow-on-hover:active {
+            color: #000;
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+
+
+nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* No underline by default */
+    font-size: 1em;
+    font-family: "Cascadia Code";
+    padding: 10px 15px; /* Padding around the text */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+    text-decoration-color: white; /* Keeps the underline white */
+    color: white; /* Ensures text color stays white on hover */
+}
