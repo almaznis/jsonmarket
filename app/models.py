@@ -17,7 +17,10 @@ class Order(db.Model):
     tshirt_id = db.Column(db.Integer, db.ForeignKey('tshirt.id'), nullable=False)
     tshirt_size = db.Column(db.String(50), nullable=False)
     tshirt_text = db.Column(db.String(50), nullable=True)
-    quantity = db.Column(db.Integer, nullable=False)
+    client_phone_number = db.Column(db.Integer, nullable=False)
+    client_city = db.Column(db.String(50), nullable=False)
+    client_address = db.Column(db.String(100), nullable=False)
+
     order_date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
