@@ -20,8 +20,6 @@ class Order(db.Model):
     client_phone_number = db.Column(db.Integer, nullable=False)
     client_city = db.Column(db.String(50), nullable=False)
     client_address = db.Column(db.String(100), nullable=False)
-
     order_date = db.Column(db.DateTime, default=datetime.utcnow)
-
     def __repr__(self):
         return f'<Order {self.id} - Tshirt ID: {self.tshirt_id}>'
